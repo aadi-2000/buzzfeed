@@ -70,7 +70,7 @@
 		echo "<p>Comment Posted! </p>";
 		if(preg_match("/good/i", $post_body)>0 || preg_match("/well done/i", $post_body)>0 || preg_match("/super/i", $post_body)>0) {
 			$app++;
-			$app_var = mysqli_query($con,"UPDATE users SET appreciation='$app' WHERE username = '$userLoggedIn'");
+			$app_var = mysqli_query($con,"UPDATE users SET appreciation='$app' WHERE username = '$posted_to'");
 		}
 	}
 	?>
